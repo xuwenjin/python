@@ -1,0 +1,17 @@
+创建新项目：
+scrapy startproject demo
+
+文件含义：
+scrapy.cfg: 项目的配置文件
+demo/: 该项目的python模块。之后您将在此加入代码。
+demo/items.py: 项目中的item文件.
+demo/pipelines.py: 项目中的pipelines文件.
+demo/settings.py: 项目的设置文件.
+demo/spiders/: 放置spider代码的目录.
+
+执行爬虫名称为demo的爬虫
+scrapy crawl demo
+
+将结果导出为最常用的JSON格式
+-o 后边是导出的文件名，-t 指定导出类型 成功执行命令后，根目录出现了一个叫 items.json 的文件
+scrapy crawl dmoz -o items.json -t json

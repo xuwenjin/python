@@ -9,3 +9,5 @@ pip install gunicorn
 pip install httpbin
 
 pip install scrapy
+
+pip install elasticsearch

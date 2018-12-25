@@ -32,7 +32,7 @@ class DemoSpider(scrapy.Spider):
         base_url = "http://www.imooc.com"
         for box in response.xpath("//div[@class='course-card-container']"):
             #选取a标签的href属性
-            item['url'] = base_url + box.xpath('//a/@href').extract()[0]
+            item['url'] = base_url + box.xpath('.//a/@href').extract()[0]
 
             #选取h3标签中，class属性为course-card-name的值
             item['title'] = box.xpath('.//h3[@class="course-card-name"]/text()').extract()[0].strip()

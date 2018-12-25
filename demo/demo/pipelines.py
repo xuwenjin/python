@@ -24,7 +24,7 @@ class DemoPipeline(object):
 
     def __init__(self):
         # 打开文件
-        self.file = open('data.json', 'w')
+        self.file = open('data.csv', 'w')
 
     # 该方法用于处理数据
     def process_item(self, item, spider):

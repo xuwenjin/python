@@ -11,7 +11,6 @@ print type(arr)
 #数组维度，返回一个元组 (行数, 列数)
 print arr.shape
 
-
 arr2 = np.array([1,2,3,4,5,6])
 print arr2
 print arr2.shape
@@ -54,6 +53,18 @@ print arr
 #random函数-创建一个随机矩阵，每个元素值是0-1之间
 arr = np.random.random((4,3))
 print arr
+
+#索引
+arr = np.array([
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12]
+])
+#取多维数组的值
+print arr[0], arr[1], arr[2] #取每行值
+print arr[0, 1], arr[1, 2], arr[2, 0] #取单个点的值
+print arr[:, 0], arr[:, 1], arr[:, 2] #取每列值
+print arr[1:, 1:3] #取第1行开始的，第1、2列值
 
 
 

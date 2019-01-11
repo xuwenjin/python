@@ -21,3 +21,29 @@ print student.head(3)
 #查询数据的末尾n行。不传默认为末尾5行
 print student.tail()
 print student.tail(2)
+
+#查询指定的行(行索引)
+print '----查询指定行----'
+#单行时，只需要一个[]，此时类型变成Series
+print student.loc[1]
+print type(student.loc[1])
+#多行时，必须使用两个[]
+print student.loc[[0,1,4,5]]
+print type(student.loc[[0,1,4,5]])
+
+#查询指定的列
+print '----查询指定列----'
+#单列时，只需要一个[]，此时类型变成Series
+print student['Age']
+print type(student['Age'])
+#多列时，必须使用两个[]
+print student[['Age', 'Name', 'Sex']]
+print student[['Age', 'Name', 'Sex']].head(2)
+
+#如果是多个条件的查询，必须在&（且）或者|（或）的两端条件用括号括起来。
+#查询出所有12岁以上的女生信息
+print student[(student['Age'] > 12) & (student['Sex'] == 'F')]
+
+#查询出所有12岁以上的女生姓名、身高和体重
+print student[(student['Age'] > 12) & (student['Sex'] == 'F')][['Name','Height', 'Weight']]
+

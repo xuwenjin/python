@@ -13,3 +13,6 @@ pip install scrapy
 pip install elasticsearch
 
 python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+
+#微信-itchat
+pip install itchat

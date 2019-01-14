@@ -37,3 +37,17 @@ def stats(x):
 
 
 print(stats(d1))
+
+# 抽取样本
+d2 = np.random.f(2, 4, size=100)
+print d2
+# 从给定的上下范围内随机选取整数
+d3 = np.random.randint(1, 100, size=100)
+print d3
+
+# 将创建的d1,d2,d3数据构建数据框：
+df = pd.DataFrame(np.array([d1, d2, d3]).T, columns=['x1', 'x2', 'x3'])
+print df.head()
+
+# 将函数应用到数据框中的每一列
+print df.apply(stats)
